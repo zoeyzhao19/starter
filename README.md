@@ -1,23 +1,7 @@
-### Inspired by [antfu](https://github.com/antfu/starter-ts)
+## Overview
 
-## Introduction
-
-```js
-
-```
-
-## Installation
-
-```bash
-
-```
-
-## Usage
-
-```
-
-```
+- [vue starter](./packages/vue/README.md)
 
 ## License
 
-[MIT]License © 2022 [zoeyzhao19](https://github.com/zoeyzhao19/)
+[MIT]License © 2023 [zoeyzhao19](https://github.com/zoeyzhao19/)
