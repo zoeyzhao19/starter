@@ -12,9 +12,8 @@ const loading = shallowRef(true)
 const router = useRouter()
 
 function handleBtnClick() {
-  router.push('/about')
-  // increment()
-  // loading.value = !loading.value
+  increment()
+  loading.value = !loading.value
 }
 
 onMounted(() => {
