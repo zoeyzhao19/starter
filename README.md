@@ -1,7 +1,7 @@
 ## Overview
 
 - [vue starter](./packages/vue/README.md)
-- [ts starter]('./packages/ts/README.md)
+- [ts starter](./packages/ts/README.md)
 
 ## License
 
