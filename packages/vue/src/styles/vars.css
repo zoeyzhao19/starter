@@ -1,0 +1,52 @@
+/**
+ * Colors Base
+ *
+ * These are the pure base color presets. Most of the time, you should not be
+ * using these colors directly in the theme but rather use "Colors Theme"
+ * instead because those are "Theme (light or dark)" dependant.
+ * -------------------------------------------------------------------------- */
+
+ :root {
+  
+  --placeholder-text-light: rgba(60, 60, 60, 0.33);
+  --placeholder-text-dark: rgba(235, 235, 235, 0.38);
+
+  --message-text-info-light: #1890ff;
+  --message-bg-info-light: #e6f7ff;
+  --message-text-success-light: #52c41a;
+  --message-bg-success-light: #f6ffed;
+  --message-text-error-light: #fff1f0;
+  --message-bg-error-light: #fff1f0;
+
+  /* TODO */
+  --message-text-info-dark: #1890ff;
+  --message-bg-info-dark: #e6f7ff;
+  --message-text-success-dark: #52c41a;
+  --message-bg-success-dark: #f6ffed;
+  --message-text-error-dark: #f5222d;
+  --message-bg-error-dark: #fff1f0;
+}
+
+/**
+ * Colors Theme
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --placeholder-text: var(--placeholder-text-light);
+  --message-text-info: var(--message-text-info-light);
+  --message-text-success: var(--message-text-success-light);
+  --message-text-error: var(--message-text-error-light);
+  --message-bg-info: var(--message-bg-info-light);
+  --message-bg-success: var(--message-bg-success-light);
+  --message-bg-error: var(--message-bg-error-light);
+}
+
+.dark {
+  --placeholder-text: var(--placeholder-text-dark);
+  --message-text-info: var(--message-text-info-dark);
+  --message-text-success: var(--message-text-success-dark);
+  --message-text-error: var(--message-text-error-dark);
+  --message-bg-info: var(--message-bg-info-dark);
+  --message-bg-success: var(--message-bg-success-dark);
+  --message-bg-error: var(--message-bg-error-dark);
+}

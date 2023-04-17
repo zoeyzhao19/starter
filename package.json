@@ -1,0 +1,67 @@
+{
+  "name": "starter",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "private": "true",
+  "homepage": "https://github.com/zoeyzhao19/starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeyzhao19/starter.git"
+  },
+  "bugs": "https://github.com/zoeyzhao19/starter/issues",
+  "scripts": {
+    "lint": "eslint --fix ./src/**",
+    "bump": "bump --commit \"release: v%s\" --tag --push",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "author": "",
+  "license": "MIT",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.38.4",
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "commitlint": "^17.5.1",
+    "eslint": "^8.38.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "rimraf": "^4.4.1",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.2.0",
+    "vitest": "^0.30.1"
+  },
+  "packageManager": "pnpm@7.32.0"
+}

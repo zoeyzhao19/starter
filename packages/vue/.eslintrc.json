@@ -1,0 +1,7 @@
+{
+  "extends": ["@antfu/eslint-config-vue"],
+  "rules": {
+    "vue/html-self-closing": "off",
+    "vue/component-tags-order": "off"
+  }
+}
