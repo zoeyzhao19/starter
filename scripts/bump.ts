@@ -9,6 +9,17 @@ import inquirer from 'inquirer';
 import colors from 'colors'
 
 let workspaceProjects: string[] = []
+let selectedProjectPaths: string[] = []
+
+const workspaceRoot = process.cwd()
+
+function normalizePath(path: string) {
+  return path.replace(/\\/g, '/')
+}
+
+function isWorkspaceRoot(path) {
+  return normalizePath(path) === normalizePath(workspaceRoot)
+}
 
 async function getAllWorkspaceProject() {
   try {
@@ -20,7 +31,7 @@ async function getAllWorkspaceProject() {
     const packagesEntries = await fsGlob([...doc.packages], {
       onlyDirectories: true
     })
-    packagesEntries.push('./')
+    packagesEntries.unshift('./')
     const resolvedPackagesEntries = packagesEntries.map(item => {
       return path.resolve(fileURLToPath(import.meta.url), `../../${item}`)
     })
@@ -31,7 +42,29 @@ async function getAllWorkspaceProject() {
   }
 }
 
-async function interactive() {
+async function promptProjects() {
+  await inquirer.prompt({
+    type: 'list',
+    name: 'project',
+    message: 'Choose a project to bump',
+    default: workspaceProjects[0] ?? workspaceRoot,
+    pageSize: 10,
+    choices: workspaceProjects.map(item => {
+      return {
+        name: isWorkspaceRoot(item) ? 'All projects' : path.basename(item),
+        value: isWorkspaceRoot(item) ? 'all' : item
+      }
+    })
+  }).then(async(answers) => {
+    if(answers === 'all') {
+      selectedProjectPaths = [...workspaceProjects]
+    } else {
+      selectedProjectPaths.push(answers)
+    }
+  })
+}
+
+async function promptBump() {
   const SEPARATOR = 'SEPARATOR'
   const bumpTypes = ['major', 'minor', 'patch', 'premajor|pre-release major', 'preminor|pre-release minor', 'prepatch|pre-release patch', 'pre-release', SEPARATOR, 'leave|leave as-is', 'custom|custom...']
   inquirer.prompt({
@@ -51,16 +84,16 @@ async function interactive() {
     }),
     loop: false,
     prefix: '>',
-  }).then((answers) => {
+  }).then(async(answers) => {
     console.log(colors.green(`Bumping all workspace projects to ${answers.bumpType}...`))
-    workspaceProjects.map(item => {
-      versionBump({
-        release: answers.bumpType,
-        cwd: item,
-      })
-    })
+    await Promise.all(selectedProjectPaths.map(item => versionBump({
+      release: answers.bumpType,
+      cwd: item,
+    })))
+    selectedProjectPaths.length = 0
   })
 }
 
 workspaceProjects = await getAllWorkspaceProject()
-interactive()
+await promptProjects()
+promptBump()
