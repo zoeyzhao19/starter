@@ -16,16 +16,16 @@ let workspaceProjects: {
 
 async function git() {
     const commitMsg = `\"release: v${workspaceProjects[0].newVersion}\"`
-    await execa('git', ['add', '.', '--dry-run'], {
+    await execa('git', ['add', '.'], {
       stdout: 'inherit',
     })
-    await execa('git', ['commit', '-m', commitMsg,  '--dry-run'], {
+    await execa('git', ['commit', '-m', commitMsg], {
       stdout: 'inherit'
     })
-    await execa('git', ['tag', '--annotate', '--message', commitMsg, '--dry-run'], {
+    await execa('git', ['tag', '--annotate', '--message', commitMsg], {
       stdout: 'inherit'
     })
-    await execa('git', ['push', '--tags', '--dry-run'])
+    await execa('git', ['push', '--tags'])
 }
 
 async function getAllWorkspaceProject() {
@@ -79,7 +79,7 @@ async function promptBump() {
     loop: false,
     prefix: '>',
   }).then(async(answers) => {
-    console.log(colors.green(`Bumping...`))
+    console.log(colors.cyan(`Bumping...`))
     await Promise.all(workspaceProjects.map(async function(item){
       const bumpResult = await versionBump({
         release: answers.bumpType,
@@ -87,9 +87,10 @@ async function promptBump() {
       })
       item.newVersion = bumpResult.newVersion
     }))
+    await git()
+    console.log(colors.green(`Bump succeed`))
   })
 }
 
 await getAllWorkspaceProject()
 await promptBump()
-await git()
