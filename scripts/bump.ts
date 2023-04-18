@@ -4,21 +4,28 @@ import fsGlob from 'fast-glob'
 import fs from 'fs'
 import {load} from 'js-yaml'
 import path from 'path'
-import {fileURLToPath} from 'url'
+import {fileURLToPath, pathToFileURL} from 'url'
 import inquirer from 'inquirer';
 import colors from 'colors'
 
-let workspaceProjects: string[] = []
-let selectedProjectPaths: string[] = []
+let workspaceProjects: {
+  path: string;
+  pkgName: string;
+  newVersion?: string;
+}[] = []
 
-const workspaceRoot = process.cwd()
-
-function normalizePath(path: string) {
-  return path.replace(/\\/g, '/')
-}
-
-function isWorkspaceRoot(path) {
-  return normalizePath(path) === normalizePath(workspaceRoot)
+async function git() {
+    const commitMsg = `\"release: v${workspaceProjects[0].newVersion}\"`
+    await execa('git', ['add', '.', '--dry-run'], {
+      stdout: 'inherit',
+    })
+    await execa('git', ['commit', '-m', commitMsg,  '--dry-run'], {
+      stdout: 'inherit'
+    })
+    await execa('git', ['tag', '--annotate', '--message', commitMsg, '--dry-run'], {
+      stdout: 'inherit'
+    })
+    await execa('git', ['push', '--tags', '--dry-run'])
 }
 
 async function getAllWorkspaceProject() {
@@ -32,36 +39,23 @@ async function getAllWorkspaceProject() {
       onlyDirectories: true
     })
     packagesEntries.unshift('./')
-    const resolvedPackagesEntries = packagesEntries.map(item => {
-      return path.resolve(fileURLToPath(import.meta.url), `../../${item}`)
-    })
-    return resolvedPackagesEntries
+    await Promise.all(packagesEntries.map(async (item, index) => {
+      const resolvedPath = path.resolve(fileURLToPath(import.meta.url), `../../${item}`)
+      const pkgPath = path.resolve(resolvedPath, './package.json')
+      const pkgName = (await import(pathToFileURL(pkgPath).toString(), {
+        assert: {
+          type: 'json'
+        }
+      })).name as string
+      workspaceProjects.push({
+        path: resolvedPath,
+        pkgName
+      })
+    }))
   } catch (err) {
     console.error(err)
     return []
   }
-}
-
-async function promptProjects() {
-  await inquirer.prompt({
-    type: 'list',
-    name: 'project',
-    message: 'Choose a project to bump',
-    default: workspaceProjects[0] ?? workspaceRoot,
-    pageSize: 10,
-    choices: workspaceProjects.map(item => {
-      return {
-        name: isWorkspaceRoot(item) ? 'All projects' : path.basename(item),
-        value: isWorkspaceRoot(item) ? 'all' : item
-      }
-    })
-  }).then(async(answers) => {
-    if(answers.project === 'all') {
-      selectedProjectPaths = [...workspaceProjects]
-    } else {
-      selectedProjectPaths.push(answers.project)
-    }
-  })
 }
 
 async function promptBump() {
@@ -70,7 +64,7 @@ async function promptBump() {
   inquirer.prompt({
     type: 'list',
     name: 'bumpType',
-    message: 'How would you like to bump your workspace?',
+    message: 'How would you like to bump it?',
     default: 'patch',
     pageSize: 10,
     choices: bumpTypes.map(item => {
@@ -85,16 +79,17 @@ async function promptBump() {
     loop: false,
     prefix: '>',
   }).then(async(answers) => {
-    console.log(colors.green(`Bumping all workspace projects to ${answers.bumpType}...`))
-    console.log({selectedProjectPaths})
-    await Promise.all(selectedProjectPaths.map(item => versionBump({
-      release: answers.bumpType,
-      cwd: item,
-    })))
-    selectedProjectPaths.length = 0
+    console.log(colors.green(`Bumping...`))
+    await Promise.all(workspaceProjects.map(async function(item){
+      const bumpResult = await versionBump({
+        release: answers.bumpType,
+        cwd: item.path,
+      })
+      item.newVersion = bumpResult.newVersion
+    }))
   })
 }
 
-workspaceProjects = await getAllWorkspaceProject()
-await promptProjects()
-promptBump()
+await getAllWorkspaceProject()
+await promptBump()
+await git()
