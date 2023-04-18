@@ -56,10 +56,10 @@ async function promptProjects() {
       }
     })
   }).then(async(answers) => {
-    if(answers === 'all') {
+    if(answers.project === 'all') {
       selectedProjectPaths = [...workspaceProjects]
     } else {
-      selectedProjectPaths.push(answers)
+      selectedProjectPaths.push(answers.project)
     }
   })
 }
@@ -86,6 +86,7 @@ async function promptBump() {
     prefix: '>',
   }).then(async(answers) => {
     console.log(colors.green(`Bumping all workspace projects to ${answers.bumpType}...`))
+    console.log({selectedProjectPaths})
     await Promise.all(selectedProjectPaths.map(item => versionBump({
       release: answers.bumpType,
       cwd: item,
