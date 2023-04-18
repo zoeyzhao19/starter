@@ -25,6 +25,7 @@ async function git() {
     await execa('git', ['tag', '--annotate', '--message', commitMsg, `v${workspaceProjects[0].newVersion}`], {
       stdout: 'inherit'
     })
+    await execa('git', ['push'])
     await execa('git', ['push', '--tags'])
 }
 
