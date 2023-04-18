@@ -14,7 +14,19 @@
   "sideEffects": false,
   "author": "",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@types/inquirer": "^9.0.3",
+    "colors": "^1.4.0",
+    "execa": "^7.1.1",
+    "fast-glob": "^3.2.12",
+    "inquirer": "^9.1.5",
+    "js-yaml": "^4.1.0",
+    "tsx": "^3.12.6"
+  },
+  "scripts": {
+    "bump": "tsx ./scripts/bump"
+  },
   "pnpm": {
     "overrides": {
       "@commitlint/cli": "^17.6.1",
