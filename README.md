@@ -5,4 +5,6 @@
 
 ## License
 
-[MIT]License © 2023 [zoeyzhao19](https://github.com/zoeyzhao19/)
+**MIT License**
+
+© 2023 [zoeyzhao19](https://github.com/zoeyzhao19/)
