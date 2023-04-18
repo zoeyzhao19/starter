@@ -80,6 +80,10 @@ async function promptBump() {
     loop: false,
     prefix: '>',
   }).then(async(answers) => {
+    if(answers.bumpType === 'leave' || answers.bumpType === 'custom') {
+      console.log(colors.cyan(`Current type ${colors.bold(answers.bumpType)} is not supported. Bump canceled`))
+      return
+    }
     console.log(colors.cyan(`Bumping...`))
     await Promise.all(workspaceProjects.map(async function(item){
       const bumpResult = await versionBump({
