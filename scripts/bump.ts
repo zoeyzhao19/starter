@@ -19,10 +19,10 @@ let workspaceProjects: {
 
 async function git(dryRun = false) {
     const commitMsg = `\"release: v${workspaceProjects[0].data.version}\"`
-    await execa('git', [dryRun ? 'add . --dry-run' : 'add .'], {
+    await execa('git', dryRun ? ['add', '.', '--dry-run'] : ['add', '.'], {
       stdout: 'inherit',
     })
-    await execa('git', [dryRun ? 'commit --dry-run' : 'commit', '-m', commitMsg], {
+    await execa('git', dryRun ? ['commit', '-m', commitMsg, '--dry-run'] : ['commit', '-m', commitMsg], {
       stdout: 'inherit'
     })
     if(!dryRun) {
