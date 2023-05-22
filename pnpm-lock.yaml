@@ -21,7 +21,7 @@ importers:
       colors: ^1.4.0
       execa: ^7.1.1
       fast-glob: ^3.2.12
-      inquirer: ^9.2.5
+      inquirer: ^9.2.6
       js-yaml: ^4.1.0
       tsx: ^3.12.7
     devDependencies:
@@ -30,7 +30,7 @@ importers:
       colors: 1.4.0
       execa: 7.1.1
       fast-glob: 3.2.12
-      inquirer: 9.2.5
+      inquirer: 9.2.6
       js-yaml: 4.1.0
       tsx: 3.12.7
 
@@ -4966,8 +4966,8 @@ packages:
       through: 2.3.8
     dev: true
 
-  /inquirer/9.2.5:
-    resolution: {integrity: sha512-Vy3qZFUPKILCgfeg6eEfKSlv4QbwwfGmdoAYqXYGlPEhY4HH0jQv+ynHkEYYE4eBDCDMWKHs77ByfHcy1GyDfA==}
+  /inquirer/9.2.6:
+    resolution: {integrity: sha512-y71l237eJJKS4rl7sQcEUiMhrR0pB/ZnRMMTxLpjJhWL4hdWCT03a6jJnC1w6qIPSRZWEozuieGt3v7XaEJYFw==}
     engines: {node: '>=14.18.0'}
     dependencies:
       ansi-escapes: 4.3.2
