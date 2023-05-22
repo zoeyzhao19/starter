@@ -14,3 +14,4 @@ __snapshots__
 !.github
 !.vscode
 .browserslistrc
+node_modules
