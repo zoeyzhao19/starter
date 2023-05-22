@@ -4,6 +4,11 @@ import { storeToRefs } from 'pinia'
 import { switchDarkLightMode } from '@src/composables'
 import { onMounted, shallowRef } from 'vue'
 import { useRouter } from 'vue-router'
+import { message } from '@src/helpers'
+
+defineOptions({
+  name: 'Home',
+})
 
 const globalStore = useGlobalStore()
 const { count } = storeToRefs(globalStore)
@@ -17,9 +22,9 @@ function handleBtnClick() {
 }
 
 onMounted(() => {
-  // message.info({ message: '一个消息' })
-  // message.success({ message: '一个成功消息' })
-  // message.error({ message: '一个错误消息' })
+  message.info({ message: '一个消息' })
+  message.success({ message: '一个成功消息' })
+  message.error({ message: '一个错误消息' })
 })
 </script>
 

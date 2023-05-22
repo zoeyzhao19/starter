@@ -20,7 +20,7 @@ const props = defineProps<{
 }>()
 
 const emits = defineEmits<{
-  (e: 'destory'): void
+  destory: []
 }>()
 
 const offset = computed(() => {
