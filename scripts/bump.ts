@@ -1,5 +1,4 @@
 import {execa} from 'execa'
-import versionBump from '@jsdevtools/version-bump-prompt'
 import fsGlob from 'fast-glob'
 import fs from 'fs'
 import {load} from 'js-yaml'
@@ -7,26 +6,30 @@ import path from 'path'
 import {fileURLToPath, pathToFileURL} from 'url'
 import inquirer from 'inquirer';
 import colors from 'colors'
+import semver from 'semver'
 
 let workspaceProjects: {
   path: string;
-  pkgName: string;
-  newVersion?: string;
+  data: {
+    name:string;
+    version: string;
+    [key: string]: any
+  }
 }[] = []
 
-async function git() {
-    const commitMsg = `\"release: v${workspaceProjects[0].newVersion}\"`
-    await execa('git', ['add', '.'], {
+async function git(dryRun = false) {
+    const commitMsg = `\"release: v${workspaceProjects[0].data.version}\"`
+    await execa('git', ['add', '.', dryRun ? '--dry-run' : ''], {
       stdout: 'inherit',
     })
-    await execa('git', ['commit', '-m', commitMsg], {
+    await execa('git', ['commit', '-m', commitMsg, dryRun ? '--dry-run' : ''], {
       stdout: 'inherit'
     })
-    await execa('git', ['tag', '--annotate', '--message', commitMsg, `v${workspaceProjects[0].newVersion}`], {
+    await execa('git', ['tag', '--annotate', '--message', commitMsg, `v${workspaceProjects[0].data.version}`, dryRun ? '--dry-run' : ''], {
       stdout: 'inherit'
     })
-    await execa('git', ['push'])
-    await execa('git', ['push', '--tags'])
+    await execa('git', ['push', dryRun ? '--dry-run' : ''])
+    await execa('git', ['push', '--tags', dryRun ? '--dry-run' : ''])
 }
 
 async function getAllWorkspaceProject() {
@@ -43,14 +46,15 @@ async function getAllWorkspaceProject() {
     await Promise.all(packagesEntries.map(async (item, index) => {
       const resolvedPath = path.resolve(fileURLToPath(import.meta.url), `../../${item}`)
       const pkgPath = path.resolve(resolvedPath, './package.json')
-      const pkgName = (await import(pathToFileURL(pkgPath).toString(), {
+      const pkg = (await import(pathToFileURL(pkgPath).toString(), {
         assert: {
           type: 'json'
         }
-      })).name as string
+      }))
+      console.log(pkg.default)
       workspaceProjects.push({
         path: resolvedPath,
-        pkgName
+        data: pkg.default
       })
     }))
   } catch (err) {
@@ -61,7 +65,7 @@ async function getAllWorkspaceProject() {
 
 async function promptBump() {
   const SEPARATOR = 'SEPARATOR'
-  const bumpTypes = ['major', 'minor', 'patch', 'premajor|pre-release major', 'preminor|pre-release minor', 'prepatch|pre-release patch', 'pre-release', SEPARATOR, 'leave|leave as-is', 'custom|custom...']
+  const bumpTypes = ['major', 'minor', 'patch', 'premajor|pre-release major', 'preminor|pre-release minor', 'prepatch|pre-release patch', 'prerelease|pre-release', SEPARATOR, 'leave|leave as-is', 'custom|custom...']
   inquirer.prompt({
     type: 'list',
     name: 'bumpType',
@@ -85,13 +89,22 @@ async function promptBump() {
       return
     }
     console.log(colors.cyan(`Bumping...`))
-    await Promise.all(workspaceProjects.map(async function(item){
-      const bumpResult = await versionBump({
-        release: answers.bumpType,
-        cwd: item.path,
+    try {
+      workspaceProjects.map(function(item){
+        const newVersion = semver.inc(item.data.version, answers.bumpType)
+        item.data.version = newVersion!
+        fs.writeFile(path.resolve(item.path, './package.json'), JSON.stringify(item.data, null ,2), {
+          encoding: 'utf-8'
+        }, (err) => {
+          if(err) {
+            throw new Error(`update ${item.path} failed, \n${err}`)
+          }
+        })
       })
-      item.newVersion = bumpResult.newVersion
-    }))
+    } catch (err) {
+      console.error(err)
+      return
+    }
     await git()
     console.log(colors.green(`Bump succeed`))
   })
