@@ -19,17 +19,19 @@ let workspaceProjects: {
 
 async function git(dryRun = false) {
     const commitMsg = `\"release: v${workspaceProjects[0].data.version}\"`
-    await execa('git', ['add', '.', dryRun ? '--dry-run' : ''], {
+    await execa('git', [dryRun ? 'add . --dry-run' : 'add .'], {
       stdout: 'inherit',
     })
-    await execa('git', ['commit', '-m', commitMsg, dryRun ? '--dry-run' : ''], {
+    await execa('git', [dryRun ? 'commit --dry-run' : 'commit', '-m', commitMsg], {
       stdout: 'inherit'
     })
-    await execa('git', ['tag', '--annotate', '--message', commitMsg, `v${workspaceProjects[0].data.version}`, dryRun ? '--dry-run' : ''], {
-      stdout: 'inherit'
-    })
-    await execa('git', ['push', dryRun ? '--dry-run' : ''])
-    await execa('git', ['push', '--tags', dryRun ? '--dry-run' : ''])
+    if(!dryRun) {
+      await execa('git', ['tag', '--annotate', '--message', commitMsg, `v${workspaceProjects[0].data.version}`], {
+        stdout: 'inherit'
+      })
+      await execa('git', ['push'])
+      await execa('git', ['push', '--tags'])
+    }
 }
 
 async function getAllWorkspaceProject() {
