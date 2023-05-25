@@ -7,7 +7,9 @@
     "lint": "eslint --fix ./src/**",
     "preview": "vite preview",
     "bump": "bump --commit \"release: v%s\" --tag --push",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "pnpm changelog && bump --commit \"release: v%s\" --tag --push",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts, vue}": [
@@ -37,6 +39,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
     "commitlint": "^17.6.3",
+    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.41.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",

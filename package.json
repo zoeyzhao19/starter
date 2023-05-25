@@ -19,6 +19,7 @@
     "@types/inquirer": "^9.0.3",
     "@types/semver": "^7.5.0",
     "colors": "^1.4.0",
+    "conventional-changelog-cli": "^2.2.2",
     "execa": "^7.1.1",
     "fast-glob": "^3.2.12",
     "inquirer": "^9.2.6",
@@ -27,13 +28,16 @@
     "tsx": "^3.12.7"
   },
   "scripts": {
-    "bump": "tsx ./scripts/bump"
+    "release": "pnpm changelog && pnpm bump",
+    "bump": "tsx ./scripts/bump",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "pnpm": {
     "overrides": {
       "@commitlint/cli": "^17.6.1",
       "@commitlint/config-conventional": "^17.6.1",
       "@jsdevtools/version-bump-prompt": "^6.1.0",
+      "conventional-changelog-cli": "^2.2.2",
       "commitlint": "^17.6.1",
       "eslint": "^8.38.0",
       "husky": "^8.0.3",
