@@ -17,6 +17,12 @@ let workspaceProjects: {
   }
 }[] = []
 
+async function changelog() {
+  await execa('conventional-changelog',  ['-p', 'angular', '-i', 'CHANGELOG.md', '-s', '-r', '0' ], {
+    stdout: 'inherit',
+  })
+}
+
 async function git(dryRun = false) {
     const commitMsg = `\"release: v${workspaceProjects[0].data.version}\"`
     await execa('git', dryRun ? ['add', '.', '--dry-run'] : ['add', '.'], {
@@ -107,6 +113,7 @@ async function promptBump() {
       console.error(err)
       return
     }
+    await changelog()
     await git()
     console.log(colors.green(`Bump succeed`))
   })

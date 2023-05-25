@@ -28,9 +28,7 @@
     "tsx": "^3.12.7"
   },
   "scripts": {
-    "release": "pnpm changelog && pnpm bump",
-    "bump": "tsx ./scripts/bump",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "bump": "tsx ./scripts/bump"
   },
   "pnpm": {
     "overrides": {
