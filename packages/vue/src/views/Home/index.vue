@@ -1,30 +1,8 @@
 <script setup lang="ts">
-import { useGlobalStore } from '@src/store'
-import { storeToRefs } from 'pinia'
 import { switchDarkLightMode } from '@src/composables'
-import { onMounted, shallowRef } from 'vue'
-import { useRouter } from 'vue-router'
-import { message } from '@src/helpers'
 
 defineOptions({
   name: 'Home',
-})
-
-const globalStore = useGlobalStore()
-const { count } = storeToRefs(globalStore)
-const { increment } = globalStore
-const loading = shallowRef(true)
-const router = useRouter()
-
-function handleBtnClick() {
-  increment()
-  loading.value = !loading.value
-}
-
-onMounted(() => {
-  message.info({ message: '一个消息' })
-  message.success({ message: '一个成功消息' })
-  message.error({ message: '一个错误消息' })
 })
 </script>
 
@@ -38,13 +16,13 @@ onMounted(() => {
         <button class="ml-2 text-xl i-carbon-sun dark:i-carbon-moon" @click="switchDarkLightMode" />
       </div>
     </nav>
-    <section flex="~ grow" items="center" justify="center">
+    <!-- <section flex="~ grow" items="center" justify="center">
       <button class="block px-4 py-2 bg-blue-500 hover:bg-blue-300" border="rounded" @click="handleBtnClick">
         + {{ count }}
       </button>
       <p v-loading="loading">
         directive
       </p>
-    </section>
+    </section> -->
   </div>
 </template>

@@ -196,6 +196,7 @@ input::-webkit-inner-spin-button {
 
 input[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 textarea {
@@ -204,6 +205,7 @@ textarea {
 
 select {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 fieldset {
@@ -221,7 +223,7 @@ fieldset {
   z-index: 999;
 }
 
-/* loading */
+/*custom loading */
 .loading-parent--relative {
   position: relative;
 }
