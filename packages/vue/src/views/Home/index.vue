@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Repl } from '@src/components'
 import { switchDarkLightMode } from '@src/composables'
 
 defineOptions({
@@ -16,13 +17,6 @@ defineOptions({
         <button class="ml-2 text-xl i-carbon-sun dark:i-carbon-moon" @click="switchDarkLightMode" />
       </div>
     </nav>
-    <!-- <section flex="~ grow" items="center" justify="center">
-      <button class="block px-4 py-2 bg-blue-500 hover:bg-blue-300" border="rounded" @click="handleBtnClick">
-        + {{ count }}
-      </button>
-      <p v-loading="loading">
-        directive
-      </p>
-    </section> -->
+    <Repl />
   </div>
 </template>

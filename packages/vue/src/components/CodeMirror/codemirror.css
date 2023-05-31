@@ -1,0 +1,50 @@
+
+.cm-editor {
+  --fontSize: 13px;
+  --font-code: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --gutter: transparent;
+
+  --cursor: #888;
+  --keyword: #af4ab1;
+  --base: #545281;
+  --string: #2ba46d;
+  --tags: #dd0000;
+  --symbol: #777777;
+  --property: #6182b8;
+  --number: #c25205;
+  --attribute: #9c3eda;
+  --selection: #d7d4f0;
+  --selection-non-focus: #d9d9d9
+}
+.dark .cm-editor {
+  --cursor: #fff;
+  --keyword: #89ddff;
+  --base: #a6accd;
+  --string: #c3e88d;
+  --tags: #f07178;
+  --symbol: #89ddff;
+  --property: #f07178;
+  --number: #f78c6c;
+  --attribute: #c792ea;
+  --selection: rgba(255, 255, 255, 0.1);
+  --selection-non-focus: rgba(255, 255, 255, 0.15)
+}
+.cm-editor {
+  height: 100%;
+  
+}
+.cm-editor .cm-scroller {
+  font-family: var(--font-code);
+  overflow-x: hidden;
+  
+}
+.cm-editor .cm-content {
+  width: 100%;
+  padding-right: 56px;
+  padding-bottom: 50px;
+}
+.cm-editor .cm-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
