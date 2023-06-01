@@ -28,7 +28,7 @@
     "tsx": "^3.12.7"
   },
   "scripts": {
-    "bump": "tsx ./scripts/bump"
+    "release": "tsx ./scripts/bump"
   },
   "pnpm": {
     "overrides": {
