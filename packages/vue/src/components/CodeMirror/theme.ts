@@ -63,6 +63,10 @@ const sfcHightlightStyle = HighlightStyle.define([
     tag: [tags.attributeName],
     color: 'var(--attribute)',
   },
+  {
+    tag: [tags.comment, tags.docComment],
+    color: 'var(--comment)',
+  },
 ])
 
 export const extensions = [sfcTheme, syntaxHighlighting(sfcHightlightStyle)]

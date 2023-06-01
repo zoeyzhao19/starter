@@ -14,6 +14,7 @@
   --number: #c25205;
   --attribute: #9c3eda;
   --selection: #d7d4f0;
+  --comment: hsl(210, 25%, 60%);
   --selection-non-focus: #d9d9d9
 }
 .dark .cm-editor {
@@ -27,6 +28,7 @@
   --number: #f78c6c;
   --attribute: #c792ea;
   --selection: rgba(255, 255, 255, 0.1);
+  --comment: #6d6d6d;
   --selection-non-focus: rgba(255, 255, 255, 0.15)
 }
 .cm-editor {
