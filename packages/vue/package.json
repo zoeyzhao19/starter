@@ -47,7 +47,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
     "commitlint": "^17.6.5",
-    "conventional-changelog-cli": "^2.2.2",
+    "conventional-changelog-cli": "^3.0.0",
     "eslint": "^8.42.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
