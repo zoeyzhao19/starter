@@ -1,19 +1,22 @@
 {
   "name": "starter",
   "version": "0.4.3",
-  "description": "",
-  "type": "module",
   "private": "true",
+  "description": "",
+  "keywords": [],
   "homepage": "https://github.com/zoeyzhao19/starter#readme",
+  "bugs": "https://github.com/zoeyzhao19/starter/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zoeyzhao19/starter.git"
   },
-  "bugs": "https://github.com/zoeyzhao19/starter/issues",
-  "keywords": [],
-  "sideEffects": false,
-  "author": "",
   "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "release": "tsx ./scripts/bump"
+  },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
     "@types/inquirer": "^9.0.3",
@@ -26,23 +29,5 @@
     "js-yaml": "^4.1.0",
     "semver": "^7.5.2",
     "tsx": "^3.12.7"
-  },
-  "scripts": {
-    "release": "tsx ./scripts/bump"
-  },
-  "pnpm": {
-    "overrides": {
-      "@commitlint/cli": "^17.6.1",
-      "@commitlint/config-conventional": "^17.6.1",
-      "@jsdevtools/version-bump-prompt": "^6.1.0",
-      "conventional-changelog-cli": "^2.2.2",
-      "commitlint": "^17.6.1",
-      "eslint": "^8.38.0",
-      "husky": "^8.0.3",
-      "lint-staged": "^13.2.1",
-      "typescript": "^4.9.5",
-      "vite": "^4.2.0",
-      "vitest": "^0.30.1"
-    }
   }
 }
