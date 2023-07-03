@@ -2,14 +2,14 @@
   "name": "@starter/vue",
   "version": "0.4.3",
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc && vite build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2",
+    "dev": "vite",
     "lint": "eslint --fix ./src/**",
-    "preview": "vite preview",
     "prepare": "husky install",
+    "preview": "vite preview",
     "release": "bump --commit \"release: v%s\" --tag --push",
-    "version": "pnpm changelog",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2"
+    "version": "pnpm changelog"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts, vue}": [
@@ -21,15 +21,8 @@
     "> 0.5%"
   ],
   "dependencies": {
-    "@codemirror/lang-css": "^6.2.0",
-    "@codemirror/lang-html": "^6.4.4",
-    "@codemirror/lang-javascript": "^6.1.9",
-    "@codemirror/language": "^6.8.0",
-    "@codemirror/state": "^6.2.1",
-    "@codemirror/view": "^6.13.2",
     "@lezer/highlight": "^1.1.6",
     "@vueuse/core": "^10.2.0",
-    "codemirror": "^6.0.1",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"

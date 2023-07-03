@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Repl } from '@src/components'
 import { switchDarkLightMode } from '@src/composables'
 
 defineOptions({
@@ -17,6 +16,5 @@ defineOptions({
         <button class="ml-2 text-xl i-carbon-sun dark:i-carbon-moon" @click="switchDarkLightMode" />
       </div>
     </nav>
-    <Repl />
   </div>
 </template>
