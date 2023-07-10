@@ -51,7 +51,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.39.6",
+    "@antfu/eslint-config-ts": "^0.39.7",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@jsdevtools/version-bump-prompt": "^6.1.0",
@@ -63,7 +63,7 @@
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1",
-    "vitest": "^0.32.2"
+    "vitest": "^0.33.0"
   },
   "packageManager": "pnpm@7.33.3"
 }
