@@ -51,13 +51,13 @@
     "dist"
   ],
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.39.7",
+    "@antfu/eslint-config-ts": "^0.39.8",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@jsdevtools/version-bump-prompt": "^6.1.0",
     "commitlint": "^17.6.6",
     "conventional-changelog-cli": "^3.0.0",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "rimraf": "^5.0.1",
