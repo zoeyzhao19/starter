@@ -1,6 +1,6 @@
 {
   "name": "@starter/vue",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "scripts": {
     "build": "vue-tsc && vite build",
     "dev": "vite",

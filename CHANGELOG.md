@@ -1,3 +1,21 @@
+# [0.5.0](https://github.com/zoeyzhao19/starter/compare/v0.4.3...v0.5.0) (2023-08-09)
+
+
+### Bug Fixes
+
+* deploy ([6731723](https://github.com/zoeyzhao19/starter/commit/673172383de7a121d661be5b636695f1b37cd4ba))
+* try fix deploy ([7fad3d6](https://github.com/zoeyzhao19/starter/commit/7fad3d63ef3c20bc81e7cf7db210b66cdad750aa))
+* vercel config ([ca8589d](https://github.com/zoeyzhao19/starter/commit/ca8589dcee2ec2f4c1826f9163aaefd4954682c0))
+
+
+### Features
+
+* **packages/vue:** add codemirror demo ([3d26521](https://github.com/zoeyzhao19/starter/commit/3d26521787ad9a8627ef948e3d256627b9240c04))
+* **packages/vue:** compile template ([146336e](https://github.com/zoeyzhao19/starter/commit/146336e4996eb0298de7a93b26175b8f566fa464))
+* remove vue repl ([fec1bc0](https://github.com/zoeyzhao19/starter/commit/fec1bc0b006fbc2738172f5065659d0c8cc6fb3b))
+
+
+
 ## [0.4.3](https://github.com/zoeyzhao19/starter/compare/v0.4.2...v0.4.3) (2023-05-25)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "starter",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "private": "true",
   "description": "",
   "keywords": [],
@@ -21,6 +21,7 @@
     "@types/inquirer": "^9.0.3",
     "@types/semver": "^7.5.0",
     "colors": "^1.4.0",
+    "conventional-changelog-cli": "^3.0.0",
     "execa": "^7.2.0",
     "fast-glob": "^3.3.1",
     "inquirer": "^9.2.10",
