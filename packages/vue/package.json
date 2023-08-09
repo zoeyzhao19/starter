@@ -21,34 +21,34 @@
     "> 0.5%"
   ],
   "dependencies": {
-    "@vueuse/core": "^10.2.0",
-    "pinia": "^2.1.4",
+    "@vueuse/core": "^10.3.0",
+    "pinia": "^2.1.6",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config-vue": "^0.39.5",
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@iconify-json/carbon": "^1.1.18",
+    "@antfu/eslint-config-vue": "^0.40.0",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@iconify-json/carbon": "^1.1.19",
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@unocss/preset-attributify": "^0.53.3",
-    "@unocss/preset-icons": "^0.53.3",
-    "@unocss/preset-wind": "^0.53.3",
-    "@vitejs/plugin-legacy": "^4.0.5",
+    "@unocss/preset-attributify": "^0.54.1",
+    "@unocss/preset-icons": "^0.54.1",
+    "@unocss/preset-wind": "^0.54.1",
+    "@vitejs/plugin-legacy": "^4.1.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
-    "commitlint": "^17.6.6",
+    "commitlint": "^17.6.7",
     "conventional-changelog-cli": "^3.0.0",
-    "eslint": "^8.43.0",
+    "eslint": "^8.46.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "postcss": "^8.4.24",
-    "terser": "^5.18.1",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.27",
+    "terser": "^5.19.2",
     "typescript": "^4.9.5",
-    "unocss": "^0.53.3",
-    "vite": "^4.3.9",
-    "vue-tsc": "^1.8.1"
+    "unocss": "^0.54.1",
+    "vite": "^4.4.8",
+    "vue-tsc": "^1.8.8"
   },
-  "packageManager": "pnpm@7.33.2"
+  "packageManager": "pnpm@7.33.6"
 }
