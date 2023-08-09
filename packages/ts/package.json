@@ -2,36 +2,17 @@
   "name": "@starter/ts",
   "version": "0.4.3",
   "description": "",
-  "type": "module",
+  "keywords": [],
   "homepage": "https://github.com/zoeyzhao19/pkg-name#readme",
+  "bugs": "https://github.com/zoeyzhao19/pkg-name/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zoeyzhao19/pkg-name.git"
   },
-  "bugs": "https://github.com/zoeyzhao19/pkg-name/issues",
-  "scripts": {
-    "dev": "unbuild --stub",
-    "build": "rimraf dist && unbuild",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest",
-    "lint": "eslint --fix ./src/**",
-    "prepare": "husky install",
-    "release": "bump --commit \"release: v%s\" --tag --push",
-    "version": "pnpm changelog",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2"
-  },
-  "keywords": [],
-  "sideEffects": false,
-  "author": "",
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "lint-staged": {
-    "**/*.{js,jsx,tsx,ts}": [
-      "eslint --fix"
-    ]
-  },
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -39,6 +20,9 @@
       "import": "./dist/index.mjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
@@ -50,6 +34,22 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "rimraf dist && unbuild",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2 && git add CHANGELOG.md",
+    "dev": "unbuild --stub",
+    "lint": "eslint --fix ./src/**",
+    "prepare": "husky install",
+    "release": "bump --commit \"release: v%s\" --tag --push --all",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "version": "pnpm changelog"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "eslint --fix"
+    ]
+  },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.39.5",
     "@commitlint/cli": "^17.6.6",
