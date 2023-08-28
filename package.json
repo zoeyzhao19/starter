@@ -21,7 +21,7 @@
     "@types/inquirer": "^9.0.3",
     "@types/semver": "^7.5.0",
     "colors": "^1.4.0",
-    "conventional-changelog-cli": "^3.0.0",
+    "conventional-changelog-cli": "^4.0.0",
     "execa": "^8.0.1",
     "fast-glob": "^3.3.1",
     "inquirer": "^9.2.10",
