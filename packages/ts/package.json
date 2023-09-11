@@ -54,13 +54,13 @@
     "@commitlint/config-conventional": "^17.7.0",
     "changelogen": "^0.5.5",
     "commitlint": "^17.7.1",
-    "eslint": "^8.48.0",
+    "eslint": "^8.49.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "rimraf": "^5.0.1",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.4"
   },
   "packageManager": "pnpm@7.33.6"
 }
