@@ -49,7 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.41.0",
+    "@antfu/eslint-config-ts": "^0.42.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "changelogen": "^0.5.5",
