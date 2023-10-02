@@ -50,17 +50,17 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.43.1",
-    "@commitlint/cli": "^17.7.1",
+    "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "changelogen": "^0.5.5",
-    "commitlint": "^17.7.1",
+    "commitlint": "^17.7.2",
     "eslint": "^8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.5"
+    "vitest": "^0.34.6"
   },
   "packageManager": "pnpm@7.33.6"
 }
