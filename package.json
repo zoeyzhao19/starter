@@ -18,13 +18,13 @@
     "release": "tsx ./scripts/bump"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.6",
-    "@types/semver": "^7.5.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/semver": "^7.5.5",
     "colors": "^1.4.0",
     "conventional-changelog-cli": "^4.1.0",
     "execa": "^8.0.1",
-    "fast-glob": "^3.3.1",
-    "inquirer": "^9.2.11",
+    "fast-glob": "^3.3.2",
+    "inquirer": "^9.2.12",
     "js-yaml": "^4.1.0",
     "semver": "^7.5.4",
     "tsx": "^3.14.0"
