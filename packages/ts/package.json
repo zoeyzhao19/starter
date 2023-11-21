@@ -50,10 +50,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.43.1",
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "changelogen": "^0.5.5",
-    "commitlint": "^17.8.1",
+    "commitlint": "^18.4.3",
     "eslint": "^8.54.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
