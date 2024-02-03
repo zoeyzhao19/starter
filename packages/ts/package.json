@@ -39,7 +39,7 @@
     "dev": "unbuild --stub",
     "lint": "eslint --fix ./src/**",
     "prepack": "nr build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "vitest run && changelogen --release && git push --follow-tags && npm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

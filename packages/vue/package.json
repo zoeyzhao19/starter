@@ -5,7 +5,7 @@
     "build": "vue-tsc && vite build",
     "dev": "vite",
     "lint": "eslint --fix ./src/**",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preview": "vite preview"
   },
   "lint-staged": {
