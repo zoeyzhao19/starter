@@ -6,8 +6,7 @@
     "dev": "vite",
     "lint": "eslint --fix ./src/**",
     "prepare": "husky install",
-    "preview": "vite preview",
-    "release": "changelogen --release && git push --follow-tags"
+    "preview": "vite preview"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts, vue}": [
