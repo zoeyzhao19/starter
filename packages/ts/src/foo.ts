@@ -1,7 +1,7 @@
 export interface Foo {
-  one: number
+  one: number;
 }
 
 export const foo = {
   one: '1',
-}
+};
