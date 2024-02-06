@@ -1,3 +1,7 @@
+## [0.5.4](https://github.com/zoeyzhao19/starter/compare/v0.5.3...v0.5.4) (2024-02-06)
+
+
+
 ## [0.5.3](https://github.com/zoeyzhao19/starter/compare/v0.5.2...v0.5.3) (2024-02-06)
 
 
