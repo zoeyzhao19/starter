@@ -20,7 +20,7 @@
   "dependencies": {
     "@vueuse/core": "^10.9.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.23",
+    "vue": "^3.4.25",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
-    "terser": "^5.30.3",
+    "terser": "^5.30.4",
     "typescript": "^5.4.5",
     "unocss": "^0.59.4",
     "vite": "^5.2.10",
