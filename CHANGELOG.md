@@ -1,3 +1,12 @@
+## [0.5.6](https://github.com/zoeyzhao19/starter/compare/v0.5.5...v0.5.6) (2024-06-05)
+
+
+### Bug Fixes
+
+* load eslint.config.js ([a50e3c2](https://github.com/zoeyzhao19/starter/commit/a50e3c29e33b2d46500cf9397a3a32ec9f2a3a99))
+
+
+
 ## [0.5.5](https://github.com/zoeyzhao19/starter/compare/v0.5.4...v0.5.5) (2024-02-07)
 
 
