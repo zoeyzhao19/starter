@@ -2,7 +2,7 @@ import type { UseFetchOptions } from '@vueuse/core';
 import { createFetch } from '@vueuse/core';
 import { unref } from 'vue';
 
-interface UseRequestInit extends Request {
+interface UseRequestInit extends RequestInit {
   prefix?: string;
 }
 
