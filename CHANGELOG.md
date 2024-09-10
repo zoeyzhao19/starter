@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/zoeyzhao19/starter/compare/v1.0.0...v1.0.1) (2024-09-10)
+
+
+### Bug Fixes
+
+* **packages/vue:** load postcss.config.mjs ([b5a5273](https://github.com/zoeyzhao19/starter/commit/b5a5273c2b0d294c640f34b1cf4f55e1ecb07141))
+
+
+
 # [1.0.0](https://github.com/zoeyzhao19/starter/compare/v0.5.6...v1.0.0) (2024-09-10)
 
 
