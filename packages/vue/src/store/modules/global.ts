@@ -1,13 +1,13 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useGlobalStore = defineStore('global', {
   state: () => ({ count: 0 }),
   getters: {
-    doubleCount: state => state.count * 2,
+    doubleCount: (state) => state.count * 2,
   },
   actions: {
     increment() {
-      this.count++
+      this.count++;
     },
   },
-})
+});

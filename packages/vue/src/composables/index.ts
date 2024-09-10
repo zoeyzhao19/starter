@@ -1,2 +1,2 @@
-export * from './appearance'
-export * from './fetch'
+export * from './appearance';
+export * from './fetch';

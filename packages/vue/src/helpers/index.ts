@@ -1,3 +1,3 @@
-import { message } from '@src/components/Message'
+import { message } from '@src/components/Message';
 
-export { message }
+export { message };

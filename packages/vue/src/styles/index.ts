@@ -1,2 +1,2 @@
-import './vars.css'
-import './normalize.css'
+import './vars.css';
+import './normalize.css';
