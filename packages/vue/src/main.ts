@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
+import '@unocss/reset/tailwind.css';
 import './styles';
-import { createPinia } from 'pinia';
 import 'uno.css';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import { vLoading } from './directives';
 import { router } from './router';
