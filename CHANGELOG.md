@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/zoeyzhao19/starter/compare/v1.0.1...v1.0.2) (2024-09-10)
+
+
+### Features
+
+* **packages/vue:** use tailwind reset style ([8496c83](https://github.com/zoeyzhao19/starter/commit/8496c837eba530ab1d407289a50526cb2a4e9b99))
+
+
+
 ## [1.0.1](https://github.com/zoeyzhao19/starter/compare/v1.0.0...v1.0.1) (2024-09-10)
 
 
