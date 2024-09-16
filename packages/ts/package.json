@@ -50,17 +50,17 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@zoeyzhao19/eslint-config": "^0.0.10",
     "changelogen": "^0.5.5",
-    "commitlint": "^19.4.1",
+    "commitlint": "^19.5.0",
     "eslint": "^9.10.0",
-    "husky": "^9.1.5",
+    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "rimraf": "^6.0.1",
-    "typescript": "^5.5.4",
+    "typescript": "^5.6.2",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.5"
+    "vitest": "^2.1.1"
   }
 }
