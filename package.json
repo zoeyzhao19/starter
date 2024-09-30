@@ -24,7 +24,7 @@
     "conventional-changelog-cli": "^5.0.0",
     "execa": "^9.4.0",
     "fast-glob": "^3.3.2",
-    "inquirer": "^10.2.2",
+    "inquirer": "^11.1.0",
     "js-yaml": "^4.1.0",
     "semver": "^7.6.3",
     "tsx": "^4.19.1"
