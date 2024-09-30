@@ -55,7 +55,7 @@
     "@zoeyzhao19/eslint-config": "^0.0.10",
     "changelogen": "^0.5.7",
     "commitlint": "^19.5.0",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "rimraf": "^6.0.1",
