@@ -21,17 +21,17 @@
   "dependencies": {
     "@vueuse/core": "^11.1.0",
     "pinia": "^2.2.4",
-    "vue": "^3.5.11",
+    "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@iconify-json/carbon": "^1.2.1",
-    "@unocss/preset-attributify": "^0.63.3",
-    "@unocss/preset-icons": "^0.63.3",
-    "@unocss/preset-wind": "^0.63.3",
-    "@unocss/reset": "^0.63.3",
+    "@iconify-json/carbon": "^1.2.3",
+    "@unocss/preset-attributify": "^0.63.4",
+    "@unocss/preset-icons": "^0.63.4",
+    "@unocss/preset-wind": "^0.63.4",
+    "@unocss/reset": "^0.63.4",
     "@vitejs/plugin-legacy": "^5.4.2",
     "@vitejs/plugin-vue": "^5.1.4",
     "@zoeyzhao19/eslint-config": "^0.0.10",
@@ -43,8 +43,8 @@
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
     "terser": "^5.34.1",
-    "typescript": "^5.6.2",
-    "unocss": "^0.63.3",
+    "typescript": "^5.6.3",
+    "unocss": "^0.63.4",
     "vite": "^5.4.8",
     "vue-tsc": "^2.1.6"
   }
