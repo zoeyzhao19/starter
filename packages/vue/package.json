@@ -19,14 +19,14 @@
     "> 0.5%"
   ],
   "dependencies": {
-    "@vueuse/core": "^11.2.0",
+    "@vueuse/core": "^11.3.0",
     "pinia": "^2.2.6",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@iconify-json/carbon": "^1.2.4",
     "@unocss/preset-attributify": "^0.64.1",
     "@unocss/preset-icons": "^0.64.1",
@@ -37,13 +37,13 @@
     "@zoeyzhao19/eslint-config": "^0.0.10",
     "autoprefixer": "^10.4.20",
     "changelogen": "^0.5.7",
-    "commitlint": "^19.5.0",
+    "commitlint": "^19.6.0",
     "eslint": "^9.15.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.49",
     "terser": "^5.36.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "unocss": "^0.64.1",
     "vite": "^5.4.11",
     "vue-tsc": "^2.1.10"
