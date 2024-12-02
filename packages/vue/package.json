@@ -32,7 +32,7 @@
     "@unocss/preset-icons": "^0.64.1",
     "@unocss/preset-wind": "^0.64.1",
     "@unocss/reset": "^0.64.1",
-    "@vitejs/plugin-legacy": "^5.4.3",
+    "@vitejs/plugin-legacy": "^6.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@zoeyzhao19/eslint-config": "^0.0.10",
     "autoprefixer": "^10.4.20",
