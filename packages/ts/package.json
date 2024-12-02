@@ -50,9 +50,9 @@
     ]
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
-    "@zoeyzhao19/eslint-config": "^0.0.10",
     "changelogen": "^0.5.7",
     "commitlint": "^19.6.0",
     "eslint": "^9.16.0",
