@@ -111,7 +111,7 @@ importers:
       '@unocss/preset-icons':
         specifier: ^0.64.1
         version: 0.64.1
-      '@unocss/preset-wind':
+      '@unocss/preset-uno':
         specifier: ^0.64.1
         version: 0.64.1
       '@unocss/reset':
@@ -6904,7 +6904,7 @@ snapshots:
   '@unocss/rule-utils@0.64.1':
     dependencies:
       '@unocss/core': 0.64.1
-      magic-string: 0.30.12
+      magic-string: 0.30.14
 
   '@unocss/transformer-attributify-jsx@0.64.1':
     dependencies:
