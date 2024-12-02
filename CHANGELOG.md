@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/zoeyzhao19/starter/compare/v1.1.2...v1.1.3) (2024-12-02)
+
+
+### Features
+
+* use @unocss/preset-uno ([33a1910](https://github.com/zoeyzhao19/starter/commit/33a19106d1a1799a435ba5ac53be3c98837e2e04))
+
+
+
 ## [1.1.2](https://github.com/zoeyzhao19/starter/compare/v1.1.1...v1.1.2) (2024-12-02)
 
 
