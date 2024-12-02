@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/zoeyzhao19/starter/compare/v1.1.0...v1.1.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* dark mode ([e7c35f6](https://github.com/zoeyzhao19/starter/commit/e7c35f6a289542a38159845eb7a85d9cde4d1a75))
+
+
+
 # [1.1.0](https://github.com/zoeyzhao19/starter/compare/v1.0.2...v1.1.0) (2024-12-02)
 
 
