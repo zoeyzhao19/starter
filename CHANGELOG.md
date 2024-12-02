@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/zoeyzhao19/starter/compare/v1.1.1...v1.1.2) (2024-12-02)
+
+
+### Features
+
+* update new eslint config ([255e52f](https://github.com/zoeyzhao19/starter/commit/255e52f71ef6c2fc0e475e0aca563fa3bc6ae5a1))
+
+
+
 ## [1.1.1](https://github.com/zoeyzhao19/starter/compare/v1.1.0...v1.1.1) (2024-12-02)
 
 
