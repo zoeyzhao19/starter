@@ -1,6 +1,6 @@
 {
   "name": "starter",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": "true",
   "description": "",
   "keywords": [],
@@ -29,5 +29,5 @@
     "semver": "^7.6.3",
     "tsx": "^4.19.2"
   },
-  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }
