@@ -19,20 +19,20 @@
     "> 0.5%"
   ],
   "dependencies": {
-    "@vueuse/core": "^12.1.0",
+    "@vueuse/core": "^12.2.0",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.0",
+    "@antfu/eslint-config": "^3.12.1",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@iconify-json/carbon": "^1.2.5",
-    "@unocss/preset-attributify": "^0.65.2",
-    "@unocss/preset-icons": "^0.65.2",
-    "@unocss/preset-uno": "^0.65.2",
-    "@unocss/reset": "^0.65.2",
+    "@unocss/preset-attributify": "^0.65.3",
+    "@unocss/preset-icons": "^0.65.3",
+    "@unocss/preset-uno": "^0.65.3",
+    "@unocss/reset": "^0.65.3",
     "@vitejs/plugin-legacy": "^6.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "autoprefixer": "^10.4.20",
@@ -40,12 +40,12 @@
     "commitlint": "^19.6.1",
     "eslint": "^9.17.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
+    "lint-staged": "^15.3.0",
     "postcss": "^8.4.49",
     "terser": "^5.37.0",
     "typescript": "^5.7.2",
-    "unocss": "^0.65.2",
-    "vite": "^6.0.5",
-    "vue-tsc": "^2.1.10"
+    "unocss": "^0.65.3",
+    "vite": "^6.0.6",
+    "vue-tsc": "^2.2.0"
   }
 }
