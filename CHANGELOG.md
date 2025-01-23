@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/zoeyzhao19/starter/compare/v1.1.3...v1.2.0) (2025-01-23)
+
+
+### Features
+
+* 新增主题切换动画 ([4908b8e](https://github.com/zoeyzhao19/starter/commit/4908b8e679ace50253abd92683e69d8cb900641b))
+
+
+
 ## [1.1.3](https://github.com/zoeyzhao19/starter/compare/v1.1.2...v1.1.3) (2024-12-02)
 
 
