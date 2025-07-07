@@ -25,27 +25,27 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.16.1",
+    "@antfu/eslint-config": "^4.16.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@iconify-json/carbon": "^1.2.10",
-    "@unocss/preset-attributify": "^66.3.2",
-    "@unocss/preset-icons": "^66.3.2",
-    "@unocss/preset-uno": "^66.3.2",
-    "@unocss/reset": "^66.3.2",
+    "@unocss/preset-attributify": "^66.3.3",
+    "@unocss/preset-icons": "^66.3.3",
+    "@unocss/preset-uno": "^66.3.3",
+    "@unocss/reset": "^66.3.3",
     "@vitejs/plugin-legacy": "^6.1.1",
     "@vitejs/plugin-vue": "^5.2.4",
     "autoprefixer": "^10.4.21",
-    "changelogen": "^0.6.1",
+    "changelogen": "^0.6.2",
     "commitlint": "^19.8.1",
-    "eslint": "^9.30.0",
+    "eslint": "^9.30.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "postcss": "^8.5.6",
     "terser": "^5.43.1",
     "typescript": "^5.8.3",
-    "unocss": "^66.3.2",
+    "unocss": "^66.3.3",
     "vite": "^6.3.5",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^2.2.12"
   }
 }
