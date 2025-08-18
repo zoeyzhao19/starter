@@ -28,7 +28,7 @@
     "@antfu/eslint-config": "^4.19.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@iconify-json/carbon": "^1.2.11",
+    "@iconify-json/carbon": "^1.2.13",
     "@unocss/preset-attributify": "^66.4.2",
     "@unocss/preset-icons": "^66.4.2",
     "@unocss/preset-uno": "^66.4.2",
