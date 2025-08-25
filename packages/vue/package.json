@@ -21,7 +21,7 @@
   "dependencies": {
     "@vueuse/core": "^12.8.2",
     "pinia": "^3.0.3",
-    "vue": "^3.5.18",
+    "vue": "^3.5.19",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "autoprefixer": "^10.4.21",
     "changelogen": "^0.6.2",
     "commitlint": "^19.8.1",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "postcss": "^8.5.6",
