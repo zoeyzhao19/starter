@@ -55,10 +55,10 @@
     "@commitlint/config-conventional": "^19.8.1",
     "changelogen": "^0.6.2",
     "commitlint": "^19.8.1",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "rimraf": "^6.1.0",
+    "rimraf": "^6.1.2",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
     "vitest": "^3.2.4"
