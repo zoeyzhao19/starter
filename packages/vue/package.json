@@ -19,7 +19,7 @@
     "> 0.5%"
   ],
   "dependencies": {
-    "@vueuse/core": "^13.9.0",
+    "@vueuse/core": "^14.2.0",
     "pinia": "^3.0.4",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"
